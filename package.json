@@ -1,0 +1,30 @@
+{
+  "name": "nucampsite",
+  "version": "1.0.0",
+  "description": "This is a website for the fictional campsite review site NuCamp.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+  },
+  "author": "BDub88",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^6.0.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-social": "^5.1.1",
+    "font": "^0.0.4",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
