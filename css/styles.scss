@@ -1,12 +1,14 @@
-$color-primary: #3046c5;
-$color-secondary: #5637dd;
-$color-pale: #cec8ff;
-$color-mid: #901cad;
-$color-dark: #60106b;
+$color-primary: #8a8a8a;
+$color-secondary: #dadadb;
+$color-pale: #d58eeb;
+$color-mid: #572863;
+$color-dark: #35033b;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
 
 $body-font: "Open Sans", sans-serif;
-$header-font: "Lobster", cursive;
+$header-font: "Indie Flower", sans-serif;
+
+$navFont-size: 14px;
 
 body {
   font-family: $body-font;
@@ -54,6 +56,12 @@ footer {
 /* Class CSS */
 .navbar {
   background-color: $color-mid;
+  height: 24px;
+  font-size: $navFont-size;
+  .countBtn {
+    height: 18px;
+    width: 36px;
+  }
 }
 
 .tab-content {
