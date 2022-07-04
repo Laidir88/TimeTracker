@@ -108,6 +108,74 @@
       </div>
     </div>
 
+    <div id="newTaskModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Create new task</h3>
+            <button
+              type="button"
+              class="close fa fa-window-close"
+              id="newTaskModalX"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="row form-group">
+                    <div class="col-12">
+                      <label class="col-form-label" for="newTaskSummary"
+                        >Summary</label
+                      >
+                    </div>
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="newTaskSummary"
+                        placeholder="Summary description"
+                      />
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-12">
+                      <label class="col-form-label" for="date">Date</label>
+                    </div>
+                    <div class="col-12">
+                      <input
+                        id="newTaskDate"
+                        type="date"
+                        name="date"
+                        placeholder="Date..."
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    id="newTaskModalCancel"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    id="newTaskSubmit"
+                    type="submit"
+                    class="btn btn-primary btn-sm ml-1"
+                  >
+                    Create
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="site-footeer">
       <div class="container">
         <div class="row">

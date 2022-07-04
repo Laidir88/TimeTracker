@@ -82,6 +82,8 @@ function addTask(task) {
   newTask.appendChild(newTaskTime);
   // Now add it to the container
   taskList.appendChild(newTask);
+
+  return true;
 }
 
 $(function () {
@@ -90,16 +92,39 @@ $(function () {
   if (tasks.length > 0) {
     createDefaultTasks();
   }
+
   // Add event listener for adding a new task
-  document.getElementById("newTaskBtn").addEventListener("click", function () {
-    console.log("you tried to create a new task");
-    let newId = tasks.length + 1;
-    let newTask = new Task(
-      newId,
-      "Need Modal form peeps.",
-      new Date().toUTCString()
-    );
-    tasks.push(newTask);
-    addTask(newTask);
+  document
+    .getElementById("newTaskSubmit")
+    .addEventListener("click", function () {
+      console.log("you are trying to create a new task");
+      let newId = tasks.length + 1;
+      let newSummary = document.getElementById("newTaskSummary").value;
+      let newDate = document.getElementById("newTaskDate").value;
+
+      let newTask = new Task(
+        newId,
+        newSummary,
+        new Date(newDate).toUTCString()
+      );
+
+      tasks.push(newTask);
+      let done = addTask(newTask);
+
+      if (done) {
+        $("#newTaskModal").modal("hide");
+      }
+    });
+
+  $("#newTaskBtn").click(function () {
+    $("#newTaskModal").modal("show");
+  });
+
+  $("#newTaskModalX").click(function () {
+    $("#newTaskModal").modal("hide");
+  });
+
+  $("#newTaskModalCancel").click(function () {
+    $("#newTaskModal").modal("hide");
   });
 });
