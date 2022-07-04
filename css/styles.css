@@ -55,15 +55,6 @@ footer {
 .btn-circle span {
   margin: 0 -2rem; }
 
-.navbar {
-  background-color: #572863;
-  height: 50px;
-  font-size: 14px;
-  display: flex;
-  color: white; }
-  .navbar .btn {
-    color: white; }
-
 .tab-content {
   border: 1px solid #ddd;
   border-top: none;

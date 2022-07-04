@@ -85,17 +85,6 @@ footer {
   margin: 0 -2rem;
 }
 
-.navbar {
-  background-color: $color-mid;
-  height: 50px;
-  font-size: $navFont-size;
-  display: flex;
-  color: white;
-  .btn {
-    color: white;
-  }
-}
-
 .tab-content {
   border: 1px solid #ddd;
   border-top: none;
