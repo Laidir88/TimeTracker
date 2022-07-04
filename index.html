@@ -29,59 +29,80 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
-          <div class="collapse navbar-collapse" id="navbar">
-            <div class="row">
-              <div class="col-3">TimeTracker</div>
-              <div class="col-3">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-primary dropdown-toggle"
-                    type="button"
-                    id="navTasksMenu"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Tasks
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="navTasksMenu">
-                    <button class="dropdown-item" type="button">
-                      New Task
-                    </button>
-                    <button class="dropdown-item" type="button">
-                      Modify Task
-                    </button>
-                    <button class="dropdown-item" type="button">
-                      Delete Task
-                    </button>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <button class="btn btn-warning countBtn" id="navTasksCount">
-                    88
-                  </button>
-                </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">
+          <img src="img/stopwatch.png" width="30" height="30" alt="" />
+        </a>
+        <a class="navbar-brand" href="#">Time Tracker</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto align-items-center">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Tasks
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">New Task</a>
+                <a class="dropdown-item" href="#">Modify Task</a>
+                <a class="dropdown-item" href="#">Delete Task</a>
               </div>
-            </div>
-          </div>
+            </li>
+            <li class="nav-item mr-4">
+              <button type="button" class="btn btn-circle btn-warning">
+                <span>88</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Metrics</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </nav>
     </header>
 
     <div class="container">
       <div class="row row-content">
-        <h1>Placeholder 1</h1>
-      </div>
-
-      <div class="row row-content align-items-center">
-        <h3>Placeholder 2</h3>
+        <h1 class="col-12">Tasks</h1>
+        <div class="col border border-dark rounded">
+          <div class="row row-content" id="Task1">
+            <div class="col">Test Tasks Here</div>
+          </div>
+        </div>
       </div>
 
       <div class="row row-content align-items-center">
         <div class="col-sm-4 col-md-3">
-          <h2 class="text-sm-left">Placeholder 3</h2>
+          <h2 class="text-sm-left">Placeholder 2</h2>
         </div>
       </div>
     </div>
@@ -108,4 +129,5 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
+  <!-- <a href="https://www.flaticon.com/free-icons/time" title="time icons">Time icons created by Freepik - Flaticon</a> -->
 </html>
