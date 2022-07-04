@@ -61,9 +61,13 @@
                 Tasks
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">New Task</a>
-                <a class="dropdown-item" href="#">Modify Task</a>
-                <a class="dropdown-item" href="#">Delete Task</a>
+                <a id="newTaskBtn" class="dropdown-item" href="#">New Task</a>
+                <a id="modTaskBtn" class="dropdown-item" href="#"
+                  >Modify Task</a
+                >
+                <a id="delTaskBtn" class="dropdown-item" href="#"
+                  >Delete Task</a
+                >
               </div>
             </li>
             <li class="nav-item mr-4">
@@ -93,16 +97,81 @@
     <div class="container">
       <div class="row row-content">
         <h1 class="col-12">Tasks</h1>
-        <div class="col border border-dark rounded">
-          <div class="row row-content" id="Task1">
-            <div class="col">Test Tasks Here</div>
+        <div id="taskList" class="col border border-dark rounded">
+          <div class="row p-2 border-bottom taskHeader">
+            <div class="col-2">Task ID</div>
+            <!-- Consider using jusifying here and below -->
+            <div class="col">Task Summary</div>
+            <div class="col-2">Task Date/Time</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="row row-content align-items-center">
-        <div class="col-sm-4 col-md-3">
-          <h2 class="text-sm-left">Placeholder 2</h2>
+    <div id="newTaskModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Create new task</h3>
+            <button
+              type="button"
+              class="close fa fa-window-close"
+              id="newTaskModalX"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="row form-group">
+                    <div class="col-12">
+                      <label class="col-form-label" for="newTaskSummary"
+                        >Summary</label
+                      >
+                    </div>
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="newTaskSummary"
+                        placeholder="Summary description"
+                      />
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-12">
+                      <label class="col-form-label" for="date">Date</label>
+                    </div>
+                    <div class="col-12">
+                      <input
+                        id="newTaskDate"
+                        type="date"
+                        name="date"
+                        placeholder="Date..."
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    id="newTaskModalCancel"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    id="newTaskSubmit"
+                    type="submit"
+                    class="btn btn-primary btn-sm ml-1"
+                  >
+                    Create
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -110,14 +179,9 @@
     <footer class="site-footeer">
       <div class="container">
         <div class="row">
-          <div class="col-4 col-sm-2 offset-1">
-            <h5>Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
-              <li><a href="#">Sites</a></li>
-              <li><a href="contactus.html">Contact</a></li>
-            </ul>
+          <div class="col col-sm-2">
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+            <em>Copyright 2022 BDubs88</em>
           </div>
         </div>
       </div>
