@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 class Task {
   constructor(id = 0, summary = "", time = "") {
     this.id = id;
@@ -92,7 +94,8 @@ $(function () {
   if (tasks.length > 0) {
     createDefaultTasks();
   }
-
+  let taskCountBtn = document.getElementById("taskCountBtn");
+  taskCountBtn.innerHTML = tasks.length;
   // Add event listener for adding a new task
   document
     .getElementById("newTaskSubmit")
@@ -110,10 +113,6 @@ $(function () {
 
       tasks.push(newTask);
       let done = addTask(newTask);
-
-      if (done) {
-        $("#newTaskModal").modal("hide");
-      }
     });
 
   $("#newTaskBtn").click(function () {
